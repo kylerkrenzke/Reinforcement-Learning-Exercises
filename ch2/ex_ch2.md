@@ -21,3 +21,8 @@ could be epsislon cases and they randomly selected the greedy option.
 The method utilizing epsilon greedy search with an epsilon value of 0.01 will perform best in the long run in terms of
 cumulative reward and probability of selecting the best action because it will converge to a probability of 1-e of
 selecting the optimal action. Given that, it is trivial that 1-0.01 > 1-0.1.
+
+## Exercise 2.4
+**If the step-size parameters, alpha_n, are not constant, then the estimate Qn is a weighted average of previously**
+**received rewards with a weighting different from that given by (2.6). What is the weighting on each prior reward**
+**for the general case, analogous to (2.6), in terms of the sequence of step-size parameters?**
