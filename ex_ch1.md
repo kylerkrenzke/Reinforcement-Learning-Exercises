@@ -36,5 +36,5 @@ dependant on the player's inital policy.
 
 The first set of probabilities (with the tendency to explore being reduced) would converge to the optimal policy for
 the agent with a perfect transition model. The second set of probabilities (without the tendency to explore being
-reduced) would converge to the optimal policy for the agent if a move only has a 1-$\alpha$ probability. Assuming the
+reduced) would converge to the optimal policy for the agent if a move only has a 1-\alpha probability. Assuming the
 agent does continue to make exploratory moves, the second set of probabilities would be better to learn.
