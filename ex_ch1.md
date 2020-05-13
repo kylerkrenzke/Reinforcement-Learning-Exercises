@@ -1,9 +1,9 @@
 # Chapter 1 Exercises
 
 ## Exercise 1.1
-### Suppose, instead of playing against a random opponent, the reinforcement learning algorithm described above played
-### against itself, with both sides learning. What do you think would happen in this case? Would it learn a different
-### policy for selecting moves?
+**Suppose, instead of playing against a random opponent, the reinforcement learning algorithm described above played**
+**against itself, with both sides learning. What do you think would happen in this case? Would it learn a different**
+**policy for selecting moves?**
 
 Yes, it would learn a different policy for selecting moves. The values of all the squares would change over time as
 the opponent changes their strategy.
