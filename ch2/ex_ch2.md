@@ -29,8 +29,9 @@ selecting the optimal action. Given that, it is trivial that 1-0.01 > 1-0.1.
 
 ## Exercise 2.5 (programming)
 **Design and conduct an experiment to demonstrate the diculties that sample-average methods have for nonstationary**
-**problems. Use a modified version of the 10-armed testbed in which all the q\*(a) start out equal and then take
+**problems. Use a modified version of the 10-armed testbed in which all the q\*(a) start out equal and then take**
 **independent random walks (say by adding a normally distributed increment with mean 0 and standard deviation 0.01**
 **to all the q⇤(a) on each step). Prepare plots like Figure 2.2 for an action-value method using sample averages,**
 **incrementally computed, and another action-value method using a constant step-size parameter, ↵ = 0.1. Use " = 0.1**
 **and longer runs, say of 10,000 steps.**
+Find in karmbandit.py
