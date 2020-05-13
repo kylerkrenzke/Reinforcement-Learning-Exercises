@@ -35,5 +35,5 @@ reduced) would converge to the optimal policy for the agent if a move only has a
 agent does continue to make exploratory moves, the second set of probabilities would be better to learn.
 
 ## Exercise 1.5: Other Improvements
-**Can you think of other ways to improve the reinforcement learning player? Can you think of any better way to solve
-**the tic-tac-toe problem as posed?
+**Can you think of other ways to improve the reinforcement learning player? Can you think of any better way to solve**
+**the tic-tac-toe problem as posed?**
