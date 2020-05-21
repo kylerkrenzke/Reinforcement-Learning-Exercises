@@ -1,6 +1,9 @@
 \documentclass[11pt]{article}
 
 \usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+
+\graphicspath{{./images/}}
 
 \title{Chapter 2 Exercises}
 \author{Kyler Krenzke}
@@ -17,8 +20,8 @@
 		0.75
 		
 		\item \textbf{Exercise 2.2 (Bandit example): Consider a k-armed bandit problem with $k=4$ actions, denoted 1, 2, 3, and 4. Consider applying to this problem a bandit
-		algorithm using e-greedy action selection, sample-average action-value estimates, and initial estimates of $Q1(a)=0$, for all $a$. Suppose the initial sequence of actions
-		and rewards is $A_1=1$, $R_1=-1$, $A_2=2$, $R_2=1$, $A_3=2$, $R_3=-2$, $A_4=2$, $R_4=2$, $A_5=3$, $R_5=0$. On some of these time steps the e case may have occurred,
+		algorithm using $\epsilon$-greedy action selection, sample-average action-value estimates, and initial estimates of $Q1(a)=0$, for all $a$. Suppose the initial sequence of
+		actions and rewards is $A_1=1$, $R_1=-1$, $A_2=2$, $R_2=1$, $A_3=2$, $R_3=-2$, $A_4=2$, $R_4=2$, $A_5=3$, $R_5=0$. On some of these time steps the e case may have occurred,
 		causing an action to be selected at random. On which time steps did this definitely occur? On which time steps could this possibly have occurred?}
 
 		The epsilon case definitely occurred for $A_4=2$ because $A_2=2$ and $A_3=2$ received an average reward of -1 which would be less than the other initally zero valued
@@ -41,7 +44,11 @@
 		with mean 0 and standard deviation 0.01 to all the $q(a)$ on each step). Prepare plots like Figure 2.2 for an action-value method using sample averages, incrementally
 		computed, and another action-value method using a constant step-size parameter, $\alpha=0.1$. Use $\epsilon=0.1$ and longer runs, say of 10,000 steps.}
 		
-		Find in exercise_2_5.py
+		\includegraphics[scale=.5]{average_rewards}
+		
+		\includegraphics[scale=.5]{optimal_action}
+		
+		Code in exercise25.py
 		
 		\item \textbf{Exercise 2.6 (Mysterious Spikes): The results shown in Figure 2.3 should be quite reliable because they are averages over 2000 individual, randomly chosen
 		10-armed bandit tasks. Why, then, are there oscillations and spikes in the early part of the curve for the optimistic method? In other words, what might make this method
@@ -67,7 +74,7 @@
 		
 		$$Q_{n+1}=Q_n+\beta_n[R_n-Q_n]$$
 		$$=\beta_nR_n+(1-\beta_n)Q_n$$
-		$$=\beta_nR_n+(1-\beta_n)[\beta_{n-1}+(1-\beta_{n-1}Q_{n-1}]
+		$$=\beta_nR_n+(1-\beta_n)[\beta_{n-1}+(1-\beta_{n-1}Q_{n-1}]$$
 		$$=\prod_{i=1}^N(1-\beta_1)Q_1 + \sum_{i=1}^N(\beta_i * \prod_{j=i+1}^N(1-\beta_j)R_j)$$
 		
 		$Q_n$ does not have initial bias,
