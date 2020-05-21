@@ -1,2 +1,3 @@
 ch*/*.aux
 ch*/*.log
+*__pycache__
