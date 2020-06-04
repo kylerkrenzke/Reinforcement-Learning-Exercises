@@ -44,7 +44,7 @@ class KBandit:
     
 class KBanditDynamic(KBandit):
     def __init__(self, k, epsilon, alpha=None, rewards=None):
-        super().__init__(k, epsilon, alpha=alpha, rewards=[(0,1) for i in range(k)])
+        super().__init__(k, epsilon, alpha=alpha, rewards=None)
         
     def step(self):
         def select_action():
