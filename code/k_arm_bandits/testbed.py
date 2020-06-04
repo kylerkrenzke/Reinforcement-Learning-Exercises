@@ -1,5 +1,5 @@
 from bandits import KBandit
-from agents import EGreedyBanditAgent
+from agents import EGreedyBanditAgent, ConstAlphaBanditAgent, UCBGreedyBanditAgent
 
 import matplotlib.pyplot as plt
 
@@ -31,4 +31,5 @@ def run(nbandits, nsteps):
     plt.legend(["e=0","e=0.1","e=0.01"])
     plt.show()
 
-run(2000,1000)
+bandit = UCBGreedyBanditAgent(KBandit(10), 2)
+bandit.step()
