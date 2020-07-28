@@ -32,7 +32,8 @@ class ConstAlphaBanditAgent(BanditAgent):
         a = select_action()
         r = self.bandit.R(a)
         self.Q[a] += self.alpha() * (r - self.Q[a])
-        return r
+        is_opt = int(self.Q.index(max(self.Q)) == a)
+        return (r, is_opt)
 
 class EGreedyBanditAgent(BanditAgent):
     def __init__(self, bandit, epsilon):
@@ -55,7 +56,8 @@ class EGreedyBanditAgent(BanditAgent):
         r = self.bandit.R(a)
         self.N[a] += 1
         self.Q[a] += self.alpha(a) * (r - self.Q[a])
-        return r
+        is_opt = int(self.Q.index(max(self.Q)) == a)
+        return (r, is_opt)
         
 class UCBGreedyBanditAgent(BanditAgent):
     def __init__(self, bandit, c):

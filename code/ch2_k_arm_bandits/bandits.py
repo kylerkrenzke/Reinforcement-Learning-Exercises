@@ -10,7 +10,7 @@ class KBandit:
         
 class KBanditDynamic(KBandit):
     def __init__(self, k, Q=None):
-        super().__init__(k, Q)
+        super().__init__(k, Q or [0 for i in range(k)])
         
     def step(self):
         for i in range(self.k):
